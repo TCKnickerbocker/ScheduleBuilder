@@ -1,13 +1,13 @@
 # **Schedule Builder Website**
 <hr>
 Thomas Knickerbocker
-
+<br>  
 ![Alt text](client/images/scheduleExample.png?raw=true "My Schedule Page")
 
 
 ## Description:
-This is a simple full-stack application utilizing node, express, pug (a more concise alternative), and a database. 
-The website has three main components: 
+This is a simple full-stack web app utilizing node, express, pug (a more concise HTML alternative), and a database. 
+The application has three main components: 
 
 1. Login and Signout Functionality: User authentication is implemented using bcrypt hashes for password protection.
 2. Schedule Management: Users can create, update, view, delete, detect scheduling conflicts, and upload JSON files containing their schedules. Schedule data is stored in a database.
