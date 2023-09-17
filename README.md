@@ -6,7 +6,7 @@ Thomas Knickerbocker
 
 
 ## Description:
-This is a simple full-stack application for a website using node, express, pug, and a database. 
+This is a simple full-stack application utilizing node, express, pug (a more concise alternative), and a database. 
 The website has three main components: 
 
 1. Login and Signout Functionality: User authentication is implemented using bcrypt hashes for password protection.
