@@ -1,0 +1,96 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+  link(rel='stylesheet', href='./client/css/schedule.css')
+  style.
+    #logoutImg {
+      width: 35px;
+    }
+    /* Add this CSS for positioning the logout icon */
+    .logout-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+  nav.navbar.navbar-expanded.navbar-light.bg-light.mb-5
+    ul.nav.nav-pills
+      li.nav-item
+        a.nav-link(href='/') Home
+      li.nav-item.active
+        a.nav-link.active(href='/schedule') My Schedule
+      li.nav-item
+        a.nav-link(href='/addEvent')
+          | Add Event
+      li.nav-item
+        a.nav-link(href='/uploadSchedule') Upload Schedule
+      li.nav-item
+        a.nav-link(href='/stocks') Stocks
+      //- li.nav-item
+      //-   a.nav-link(href='/login', onclick='logout()')
+      //-     div.logout-icon
+      //-       img#logoutImg(src='./client/images/logOut.png' alt='Log out')
+
+.container
+  .row
+    p
+      br
+  .row
+    .col-md-4
+    .col-md-4
+      .panel.panel-default
+
+        form(name='EventForm' method='post' action=`/updateEvent/${record.id}`)
+          table.table.table-bordered.table-hover
+            tbody
+              tr
+                td.col-md-6 Event
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='text' name='event' required='' maxlength='30' value=(record.name || ""))
+              tr
+                td.col-md-6 Day
+                td.col-md-6
+                  .form-group
+                    select.form-control(name='day')
+                      each day in ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+                        option(value=day selected=(record.day === day)) #{day}
+              tr
+                td.col-md-6 Start Time
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='time' name='start' required='' value=(record.start || ""))
+              tr
+                td.col-md-6 End Time
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='time' name='end' required='' value=(record.end || ""))
+              tr
+                td.col-md-6 Phone
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='text' name='phone' required='' maxlength='60' value=(record.phone || ""))
+              tr
+                td.col-md-6 Location
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='text' name='location' required='' maxlength='100' value=(record.location || ""))
+              tr
+                td.col-md-6 Extra Info
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='text' name='info' required='' maxlength='100' value=(record.info || ""))
+              tr
+                td.col-md-6 URL for the Extra Info
+                td.col-md-6
+                  .form-group
+                    input.form-control(type='url' name='url' required='' maxlength='200' value=(record.url || ""))
+              tr
+                td(colspan='2')
+                  input.btn.btn-primary(type='submit' value='Submit')
+    .col-md-4

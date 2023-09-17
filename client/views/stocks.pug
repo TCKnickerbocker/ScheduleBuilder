@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    link(rel='stylesheet', href='./client/css/schedule.css')
+    style.
+        #logoutImg{width:35px;}
+
+  body
+    nav.navbar.navbar-expanded.navbar-light.bg-light.mb-5
+      ul.nav.nav-pills
+        li.nav-item
+          a.nav-link(href='/') Home
+        li.nav-item
+          a.nav-link(href='/schedule') My Schedule
+        li.nav-item
+          a.nav-link(href='/addEvent')
+            | Add Event
+        li.nav-item
+          a.nav-link(href='/uploadSchedule') Upload Schedule
+        li.nav-item.active
+          a.nav-link.active(href='/stocks') Stocks
+        li.nav-item
+          a.nav-link(href='/login', onclick='logout()')
+            img#logoutImg(src='./client/images/logOut.png' alt='Log out')
+    .container.mt-4
+      h1.text-center.mb-4 Stock Quotes
+      if stocks.length > 0
+        script.
+          console.log('Stocks:');
+          console.log('Stocks:', !{JSON.stringify(stocks)});
+        table.table.table-striped
+          thead
+            tr
+              th Stock Symbol
+              th Company Name
+              th Last Price
+              th Change
+          tbody
+            each stock in stocks
+              tr
+                td= stock.symbol
+                td= stock.companyName
+                td= stock.lastPrice
+                td= stock.change
+      else
+        p.text-center No stock data available.

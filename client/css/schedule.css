@@ -1,0 +1,28 @@
+tr:hover .hiddenLinks {
+    display: inline-block;
+}
+
+div.hiddenLinks {
+    display: none;
+}
+
+.hiddenLinks a {
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hiddenLinks a.delete {
+    background-color: rgb(229, 70, 70); 
+    padding: 5px 10px;
+    color: white;
+    margin-left: 5px;
+}
+
+.hiddenLinks a.edit {
+    background-color: rgb(124, 210, 222); 
+    padding: 5px 10px; 
+    color: white;
+}
+

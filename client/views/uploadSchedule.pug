@@ -1,0 +1,43 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous')
+  link(rel='stylesheet' href='./client/css/schedule.css')
+  style.
+    #logoutImg{width:35px;}
+  title Upload Schedule
+nav.navbar.navbar-expanded.navbar-light.bg-light.mb-5
+  ul.nav.nav-pills
+    li.nav-item
+      a.nav-link(href='/') Home
+    li.nav-item
+      a.nav-link(href='/schedule') My Schedule
+    li.nav-item
+      a.nav-link(href='/addEvent')
+        | Add
+        | Event
+    li.nav-item.active
+      a.nav-link.active(href='/uploadSchedule') Upload Schedule
+    li.nav-item
+      a.nav-link(href='/stocks') Stocks
+    li.nav-item
+      a.nav-link(href='/login' onclick='logout()')
+        img#logoutImg(src='./client/images/logOut.png' alt='Log out')
+body
+  .container
+    .row.justify-content-center.mt-5
+      .col-md-6
+        .card
+          .card-header
+            h1.text-center Upload JSON File
+          .card-body
+            form(action="/uploadJson", method="POST", enctype="multipart/form-data")
+              .form-group
+                label(for="jsonFile") Choose a JSON File:
+                input.form-control(type="file", name="jsonFile", id="jsonFile", accept=".json", required)
+              br
+              button.btn.btn-primary(type="submit") Upload JSON File

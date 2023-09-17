@@ -1,0 +1,85 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    link(rel='stylesheet' href='./client/css/home.css')
+    style.
+      body { 
+        background-color: #f8f9fa; 
+      }
+      .navbar {
+        background-color: #ffffff;
+      }
+      .container {
+        margin-top: 80px;
+      }
+      h1 {
+        font-size: 36px;
+        color: #333;
+      }
+      .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .card-title {
+        font-size: 24px;
+        color: #333;
+      }
+      .card-text {
+        font-size: 16px;
+        color: #555;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+      .btn-primary:focus {
+        box-shadow: none;
+      }
+      .btn-primary:active {
+        background-color: #0056b3;
+      }
+      .btn-primary:disabled {
+        background-color: #b8c2cc;
+      }
+      .btn-primary:disabled:hover {
+        background-color: #b8c2cc;
+      }
+      .logout-button {
+        width: 35px;
+      }
+
+  body
+    nav.navbar.navbar-expanded.navbar-light.bg-light
+      ul.nav.nav-pills
+        li.nav-item
+          a.nav-link(href='/logout', onclick='logout()')
+            img.logout-button(src='./client/images/logOut.png', alt='Log out')
+    .container
+      h1.text-center Welcome to My Website
+      p.text-center
+        | Explore the following features:
+      .row.mt-5
+        .col-md-6
+          .card
+            .card-body.text-center
+              h2.card-title Schedule Builder
+              p.card-text
+                | Build and manage your schedule effortlessly.
+              a.btn.btn-primary(href='/schedule') Go to Schedule Builder
+        .col-md-6
+          .card
+            .card-body.text-center
+              h2.card-title Stock Price Checker
+              p.card-text
+                | Check real-time stock prices and updates.
+              a.btn.btn-primary(href='/stocks') Go to Stock Price Checker

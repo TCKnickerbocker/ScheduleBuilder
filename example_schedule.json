@@ -1,0 +1,57 @@
+{
+  "monday": [
+    {
+      "name": "CSCI 5481 Lecture",
+      "start": "13:00",
+      "end": "14:15",
+      "phone": "See Class information on Canvas",
+      "location": "108 Mechanical Engineering",
+      "info": "Computational Genomics Course",
+      "url": "https://umtc.catalog.prod.coursedog.com/courses/7906571"
+    },
+    {
+      "name": "CSCI 5523 Lecture",
+      "start": "14:30",
+      "end": "15:45",
+      "phone": "See Class information on Canvas",
+      "location": "3-210 Keller Hall",
+      "info": "Data Mining Course",
+      "url": "https://umtc.catalog.prod.coursedog.com/courses/7906571"
+    }
+  ],
+  "tuesday": [
+    {
+      "name": "INET 4007 Lecture",
+      "start": "18:00",
+      "end": "21:35",
+      "phone": "See Class information on Canvas",
+      "location": "11 Appleby Hall",
+      "info": "Cyber Security Course",
+      "url": "https://umtc.catalog.prod.coursedog.com/courses/8140571"
+    }
+  ],
+  "wednesday": [
+    {
+      "name": "CSCI 5481 Lecture",
+      "start": "13:00",
+      "end": "14:15",
+      "phone": "See Class information on Canvas",
+      "location": "108 Mechanical Engineering",
+      "info": "Computational Genomics Course",
+      "url": "https://umtc.catalog.prod.coursedog.com/courses/7906571"
+    },
+    {
+      "name": "CSCI 5523 Lecture",
+      "start": "14:30",
+      "end": "15:45",
+      "phone": "See Class information on Canvas",
+      "location": "3-210 Keller Hall",
+      "info": "Data Mining Course",
+      "url": "https://umtc.catalog.prod.coursedog.com/courses/7906571"
+    }
+  ],
+  "thursday": [],
+  "friday": [],
+  "saturday": [],
+  "sunday": []
+}

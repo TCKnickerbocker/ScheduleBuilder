@@ -1,0 +1,65 @@
+body {
+  background-color: #f8f9fa;
+  position: relative; /* Added relative positioning to the body */
+}
+
+.navbar {
+  background-color: #ffffff;
+}
+
+.container {
+  margin-top: 80px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary:focus {
+  box-shadow: none;
+}
+
+.btn-primary:active {
+  background-color: #0056b3;
+}
+
+.btn-primary:disabled {
+  background-color: #b8c2cc;
+}
+
+.btn-primary:disabled:hover {
+  background-color: #b8c2cc;
+}
+
+.logout-button {
+  width: 35px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

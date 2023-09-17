@@ -1,0 +1,49 @@
+html
+  head
+    title ERROR: Incorrect JSON Format for Schedule
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+
+  body
+    .container.mt-5
+      .row
+        .col-md-6.offset-md-3
+          .alert.alert-danger.text-center
+            h1 JSON Error(style="font-weight: bold; color: red")
+            p There was an error parsing the uploaded JSON file. Please ensure it follows the correct format for the schedule.
+            h2 Example JSON Schedule Object:
+            pre
+              code
+                | {
+                |   "monday": [
+                |     {
+                |       "name": "Lacrosse Practice",
+                |       "start": "3:00 PM",
+                |       "end": "5:00 PM",
+                |       "location": "Greenfield Park",
+                |       "info": "Team lacrosse practice session",
+                |       "contact": "Coach John Doe",
+                |       "phone": "+1 (123) 456-7890"
+                |     }
+                |   ],
+                |   "tuesday": [],
+                |   "wednesday": [],
+                |   "thursday": [
+                |     {
+                |       "name": "Art Club Meeting",
+                |       "start": "6:30 PM",
+                |       "end": "8:00 PM",
+                |       "location": "Community Center",
+                |       "info": "Weekly meeting for the local art club",
+                |       "contact": "Jane Smith",
+                |       "phone": "+1 (234) 567-8901"
+                |     }
+                |   ],
+                |   "friday": [],
+                |   "saturday": [],
+                |   "sunday": []
+                | }
+            a.btn.btn-danger.btn-block(href="/uploadSchedule") Go Back
+
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous')
