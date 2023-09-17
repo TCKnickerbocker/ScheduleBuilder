@@ -1,4 +1,5 @@
-# Schedule Builder Website
+# **Schedule Builder Website**
+<hr>
 Thomas Knickerbocker
 
 ![Alt text](client/images/scheduleExample.png?raw=true "My Schedule Page")
